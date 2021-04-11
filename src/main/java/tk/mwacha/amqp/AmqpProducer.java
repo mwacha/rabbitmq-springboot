@@ -1,5 +1,5 @@
-package tk.mwacha.amqp;
-
-public interface AmqpProducer <T>{
-    void producer(T t);
-}
+//package tk.mwacha.amqp;
+//
+//public interface AmqpProducer <T>{
+//    void producer(T t);
+//}

@@ -9,11 +9,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
-public class ProducerRabbitConfiguration {
+public class ProducerRabbitConfiguration implements Serializable {
 
     @Value("${spring.rabbitmq.request.routing-key.producer}")
     private String queue;

@@ -1,18 +1,18 @@
 package tk.mwacha.service.implementation;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import tk.mwacha.amqp.AmqpProducer;
+
+import tk.mwacha.amqp.implementation.ProducerRabbitMQ;
 import tk.mwacha.dto.Message;
-import tk.mwacha.service.AmqpService;
 
 @Service
-public class RabbitMQService implements AmqpService {
+@RequiredArgsConstructor
+public class RabbitMQService {
 
-    @Autowired
-    private AmqpProducer<Message> amqp;
+    private final ProducerRabbitMQ amqp;
 
-    @Override
     public void sendToConsumer(Message message) {
         amqp.producer(message);;
     }
