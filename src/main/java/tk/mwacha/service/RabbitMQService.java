@@ -1,10 +1,9 @@
-package tk.mwacha.service.implementation;
+package tk.mwacha.service;
 
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import tk.mwacha.amqp.implementation.ProducerRabbitMQ;
+import tk.mwacha.amqp.ProducerRabbitMQ;
 import tk.mwacha.dto.Message;
 
 @Service

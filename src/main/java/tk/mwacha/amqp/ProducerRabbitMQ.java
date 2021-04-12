@@ -1,4 +1,4 @@
-package tk.mwacha.amqp.implementation;
+package tk.mwacha.amqp;
 
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;

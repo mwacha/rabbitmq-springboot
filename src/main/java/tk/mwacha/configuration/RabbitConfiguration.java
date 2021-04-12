@@ -53,18 +53,15 @@ public class RabbitConfiguration {
     // Consumer
 
     @Bean
-    public MessageConverter jsonMessageConverter() {
-        return new Jackson2JsonMessageConverter();
+    MessageConverter messageConverter(ObjectMapper objectMapper) {
+        return new Jackson2JsonMessageConverter(objectMapper);
     }
 
     @Bean
-    public SimpleRabbitListenerContainerFactory consumerFactory(ConnectionFactory connectionFactory,
-                                                                SimpleRabbitListenerContainerFactoryConfigurer configurer) {
+    public SimpleRabbitListenerContainerFactory rabbitListenerContainerFactory(ConnectionFactory connectionFactory,MessageConverter messageConverter) {
         SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
-        configurer.configure(factory,connectionFactory);
-
-        factory.setMessageConverter(jsonMessageConverter());
-
+        factory.setMessageConverter(messageConverter);
+        factory.setConnectionFactory(connectionFactory);
         return factory;
     }
 
