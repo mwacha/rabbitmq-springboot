@@ -11,7 +11,7 @@ import tk.mwacha.service.ConsumerService;
 
 @Component
 @RequiredArgsConstructor
-public class ConsumerRabbitMQ {
+public class EventConsumer {
 
    private final ConsumerService service;
 

@@ -11,7 +11,7 @@ import tk.mwacha.dto.Message;
 
 @Component
 @RequiredArgsConstructor
-public class ProducerRabbitMQ {
+public class EventSender {
 
     private final RabbitTemplate rabbitTemplate;
 
@@ -21,7 +21,7 @@ public class ProducerRabbitMQ {
     @Value("${spring.rabbitmq.request.exchange.producer}")
     private String exchange;
 
-    public void producer(Message message) {
+    public void send(Message message) {
         try {
             rabbitTemplate.convertAndSend(exchange, queue, message);
         } catch (Exception e) {
