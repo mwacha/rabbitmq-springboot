@@ -1,0 +1,1 @@
+CREATE DATABASE integrations_amqp;

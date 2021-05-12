@@ -8,10 +8,10 @@ import org.springframework.context.annotation.ComponentScan;
 @org.springframework.boot.autoconfigure.SpringBootApplication
 @EnableRabbit
 @ComponentScan("tk.mwacha")
-public class SpringBootApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }

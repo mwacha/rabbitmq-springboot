@@ -2,6 +2,12 @@ server:
   port: 8081
 
 spring:
+  application:
+    name: integrations-amqp
+  datasource:
+    url: jdbc:postgresql://localhost:5432/integrations_amqp
+    password: postgres
+    username: postgres
   rabbitmq:
     request:
       host: localhost
