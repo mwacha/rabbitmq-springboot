@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import tk.mwacha.amqp.EventSender;
-import tk.mwacha.dto.Message;
+import tk.mwacha.alloy.dto.Message;
 
 @Service
 @RequiredArgsConstructor

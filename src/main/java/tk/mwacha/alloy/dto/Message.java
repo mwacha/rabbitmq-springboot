@@ -1,4 +1,4 @@
-package tk.mwacha.dto;
+package tk.mwacha.alloy.dto;
 
 import lombok.*;
 

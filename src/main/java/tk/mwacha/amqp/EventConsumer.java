@@ -5,7 +5,7 @@ import org.springframework.amqp.AmqpRejectAndDontRequeueException;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
-import tk.mwacha.dto.Message;
+import tk.mwacha.alloy.dto.Message;
 import tk.mwacha.service.ConsumerService;
 
 
