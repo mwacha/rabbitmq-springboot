@@ -1,5 +1,5 @@
 # Getting Started
-docker run -d --hostname my-rabbit --name rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management
+Executar o comando: docker-compose up e subir a aplicação
 ### Reference Documentation
 For further reference, please consider the following sections:
 
