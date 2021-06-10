@@ -9,6 +9,6 @@ public class ConsumerService {
 
     public void action(Message message) throws Exception {
         //throw new Exception("Error");
-       System.out.println(message.getText());
+  //     System.out.println(message.getText());
     }
 }

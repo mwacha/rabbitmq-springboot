@@ -15,9 +15,10 @@ spring:
       username: guest
       password: guest
       exchange:
-        producer: ex.producer.aula-spring #topic
+        producer: ex.producer.employee
       routing-key:
-        producer: rk.producer.aula-spring #queue
+        producer: rk.producer.employee
       deadletter:
-        producer: dl.producer.aula-spring #dlq
-
+        producer: dl.producer.employee
+  config:
+    import: optional:configserver:htp://localhost:8081
