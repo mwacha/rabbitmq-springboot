@@ -84,7 +84,8 @@ $$ LANGUAGE plpgsql;
 
 DROP TABLE IF EXISTS profiles;
 CREATE TABLE profiles (
-  id UUID NOT NULL DEFAULT uuid_generate_v4() ,
+  id UUID NOT NULL DEFAULT uuid_generate_v4(),
+  tenant_id bigint NOT NULL,
   profile_name varchar(50) NOT NULL,
   created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),
   updated_at TIMESTAMP WITH TIME ZONE NULL,
@@ -96,6 +97,7 @@ CREATE TABLE profiles (
 CREATE TABLE users(
   id UUID NOT NULL DEFAULT uuid_generate_v4() ,
   profile_id UUID NOT NULL,
+  tenant_id bigint NOT NULL,
   email varchar(100) DEFAULT NULL,
   pass varchar(200) DEFAULT NULL,
   user_name varchar(200) NOT NULL,

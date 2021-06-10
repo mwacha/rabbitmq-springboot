@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import tk.mwacha.configuration.CustomJdbcTokenStore;
 
 @Controller
-@RequestMapping(value="auth")
+@RequestMapping(value="api/auth")
 public class AuthController  {
 
 	@Resource(name="tokenStore")
