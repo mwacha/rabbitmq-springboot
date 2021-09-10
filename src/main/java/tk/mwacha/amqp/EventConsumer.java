@@ -9,7 +9,7 @@ import tk.mwacha.alloy.dto.Message;
 import tk.mwacha.service.ConsumerService;
 
 
-@Component
+//@Component
 @RequiredArgsConstructor
 public class EventConsumer {
 

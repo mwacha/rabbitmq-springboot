@@ -1,10 +1,9 @@
 package tk.mwacha.interactions;
 
+import java.util.List;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import tk.mwacha.entities.Employee;
 import tk.mwacha.exceptions.EntityNotFoundException;
@@ -23,7 +22,7 @@ public class EmployeeFind {
   }
 
 
-  public Page<Employee> findActives(Pageable pageable) {
-  return repository.findAll(pageable);
+  public List<Employee> findActives() {
+  return repository.findAll();
   }
 }
